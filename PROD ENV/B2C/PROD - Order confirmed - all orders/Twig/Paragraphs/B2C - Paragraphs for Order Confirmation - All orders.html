@@ -1,0 +1,43 @@
+<!-- START : ORDER -->
+{% set orderEncoded = attribute(tokens, '{order}')  %}
+{% set order = orderEncoded| json_decode_html %} 
+<!-- START : ORDER -->
+
+<!-- START: Preferred locale -->
+{% set preferredLocale = contact.preferred_locale %}
+<!-- END: Preferred locale -->
+
+<!-- START : SET PAYMENT METHOD -->
+{% set virtualOrder = order.virtual_order %}
+<!-- END : SET PAYMENT METHOD -->
+
+
+<!-- START English -->
+    <!-- START: virtualOrder - TRUE -->
+    {% if virtualOrder == true %}
+        <p> </p>
+
+        <p>Happy days! We just finished verifying your order details, and you're all set. Consider this our confirmation of your order {{order.increment_id}}.</p>
+
+        <p> </p>
+
+        <p>We're happy and honoured that you chose us to be part of your journey to parenthood. We are here to help at every step of the way.</p>
+    {%endif%}
+    <!-- END: virtualOrder - TRUE -->
+
+    <!-- START: virtualOrder - FALSE -->
+    {% if virtualOrder == false %}
+        <p> </p>
+
+        <p>Happy days! We just finished verifying your order details, and you're all set. Consider this our confirmation of your order {{order.increment_id}}.</p>
+
+        <p> </p>
+
+        <p>We're happy and honoured that you chose us to be part of your journey to parenthood. We are here to help at every step of the way.</p>
+
+        <p> </p>
+
+        <p>We'll finalise your order shortly, and we'll let you know when it's ready. In the meantime, if you need anything, please don't hesitate to get in touch. Call us, drop an email or use the chat online :-)</p>
+    {%endif%}
+    <!-- END: virtualOrder - FALSE -->
+<!-- END English -->

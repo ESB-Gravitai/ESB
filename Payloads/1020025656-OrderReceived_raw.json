@@ -1,0 +1,120 @@
+{
+    "locale": "en_GB",
+    "currency": "EUR",
+    "entity_id": "38818",
+    "increment_id": "1020025656",
+    "date_order": "2022-09-26",
+    "grand_total": 558.75,
+    "tax_total": 111.75,
+    "subtotal_excl_tax": 447,
+    "subtotal_incl_tax": 558.75,
+    "shipping_excl_tax": "0",
+    "shipping_incl_tax": "0",
+    "shipping_discount_excl_tax": "0",
+    "shipping_discount_incl_tax": "0",
+    "comment": null,
+    "person_ordering_firstname": "Jonas",
+    "person_ordering_middlename": null,
+    "person_ordering_lastname": "B2B",
+    "billing_firstname": "Aagaard Klinik..",
+    "billing_middlename": null,
+    "billing_lastname": "-",
+    "billing_company": "Aagaard Klinik..",
+    "billing_street": "Hedeager 35",
+    "billing_postcode": "8200",
+    "billing_city": "\u00c5rhus N",
+    "billing_country_code": "DK",
+    "billing_email": "info@aagaardklinik.dk",
+    "shipping_firstname": "Aagaard Klinik..",
+    "shipping_middlename": null,
+    "shipping_lastname": "-",
+    "shipping_company": "Aagaard Klinik..",
+    "shipping_street": "Hedeager 35",
+    "shipping_postcode": "8200",
+    "shipping_city": "\u00c5rhus N",
+    "shipping_country_code": "DK",
+    "treatment_person": "",
+    "date_treatment": null,
+    "date_last_shipment": "2022-09-30",
+    "payment_method": "banktransfer",
+    "credit_card_masked_number": null,
+    "credit_card_type": null,
+    "link_payment": "https:\/\/stage-shop.europeanspermbank.com\/en\/redirect\/view?id=01bb7fce7bc3092be4e73a6a44857424",
+    "link_order_status": "https:\/\/stage-shop.europeanspermbank.com\/en\/",
+    "storage_order": false,
+    "virtual_order": false,
+    "items": [
+        {
+            "type": "donor_grouped_items",
+            "name": "Erlan",
+            "email_image": "https:\/\/assets2poc.blob.core.windows.net\/donor\/conv\/12c04b7d-58bd-eb11-8235-000d3ade3c7f\/baby_photo_1.jpg",
+            "grouped_items": [
+                {
+                    "type": "pregnancy_slot",
+                    "row_total_incl_tax": 0,
+                    "row_total_excl_tax": 0,
+                    "row_tax": 0,
+                    "row_tax_rate": 25,
+                    "quantity": 1,
+                    "name": "Erlan",
+                    "treatment_country": "DK",
+                    "purchase_type": "any_residence",
+                    "display_name": "Pregnancy Slot - Foreign patients"
+                },
+                {
+                    "type": "pregnancy_slot",
+                    "row_total_incl_tax": 0,
+                    "row_total_excl_tax": 0,
+                    "row_tax": 0,
+                    "row_tax_rate": 25,
+                    "quantity": 1,
+                    "name": "Erlan",
+                    "treatment_country": "DK",
+                    "purchase_type": "same_residence",
+                    "display_name": "Pregnancy Slot - Local patients"
+                },
+                {
+                    "type": "straw",
+                    "row_total_incl_tax": 558.75,
+                    "row_total_excl_tax": 447,
+                    "row_tax": 111.75,
+                    "row_tax_rate": 25,
+                    "quantity": 1,
+                    "name": "Erlan",
+                    "straw_type": "iui",
+                    "mot": "10"
+                }
+            ]
+        },
+        {
+            "type": "pregnancy_slots",
+            "name": "Pregnancy Slot",
+            "grouped_items": [
+                {
+                    "type": "pregnancy_slot",
+                    "row_total_incl_tax": 0,
+                    "row_total_excl_tax": 0,
+                    "row_tax": 0,
+                    "row_tax_rate": 25,
+                    "quantity": 1,
+                    "name": "Erlan",
+                    "treatment_country": "DK",
+                    "purchase_type": "any_residence",
+                    "display_name": "Foreign patients"
+                },
+                {
+                    "type": "pregnancy_slot",
+                    "row_total_incl_tax": 0,
+                    "row_total_excl_tax": 0,
+                    "row_tax": 0,
+                    "row_tax_rate": 25,
+                    "quantity": 1,
+                    "name": "Erlan",
+                    "treatment_country": "DK",
+                    "purchase_type": "same_residence",
+                    "display_name": "Local patients"
+                }
+            ]
+        }
+    ]
+}

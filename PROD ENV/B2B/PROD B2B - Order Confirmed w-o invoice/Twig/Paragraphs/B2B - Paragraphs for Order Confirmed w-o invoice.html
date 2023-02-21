@@ -1,0 +1,26 @@
+<!-- START : ORDER -->
+{% set orderEncoded = attribute(tokens, '{order}')  %}
+{% set order = orderEncoded| json_decode_html %} 
+<!-- START : ORDER -->
+
+<!-- START: Preferred locale -->
+{% set preferredLocale = contact.preferred_locale %}
+<!-- END: Preferred locale -->
+
+<!-- START : SET PAYMENT METHOD -->
+{% set virtualOrder = order.virtual_order %}
+<!-- END : SET PAYMENT METHOD -->
+
+<!-- START: virtualOrder - TRUE -->
+{% if virtualOrder == true %}
+
+{%endif%}
+<!-- END: virtualOrder - TRUE -->
+
+<!-- START: virtualOrder - FALSE -->
+{% if virtualOrder == false %}
+    We'll finalise your order shortly, and we'll let you know when it's ready.
+    <br><br>
+    In the meantime, if you need anything, please don't hesitate to get in touch. Simply call us, drop an email or use the chat on our website.
+{%endif%}
+<!-- END: virtualOrder - FALSE -->

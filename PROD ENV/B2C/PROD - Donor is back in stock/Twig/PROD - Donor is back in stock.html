@@ -1,0 +1,16 @@
+{% set orderEncoded = attribute(tokens, '{order}') %}
+{% set order = orderEncoded| json_decode_html %}
+
+<mj-text align="center" padding-right="35px" padding-left="35px" padding-top="14px" line-height="24px">
+    <p style="margin-top: 0px">
+        <strong>
+            At the time of sending you this email {{ "now"|date("d/m/Y") }} at {{ now|date("g:i", "Europe/Paris") }} CET
+            <br>
+            we have 
+                {% for item in order.items %}
+                    {{item.total_qty_available}}
+                {% endfor %} 
+            straws from {{order.name}} back in stock.
+        </strong>
+    </p>
+</mj-text>

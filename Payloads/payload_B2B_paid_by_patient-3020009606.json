@@ -1,0 +1,103 @@
+{
+    "locale": "da_DK",
+    "currency": "DKK",
+    "entity_id": "64777",
+    "increment_id": "3020009606",
+    "date_order": "2022-06-09",
+    "grand_total": 28421.75,
+    "tax_total": 0,
+    "subtotal_excl_tax": 26373,
+    "subtotal_incl_tax": 26373,
+    "shipping_excl_tax": "2048.75",
+    "shipping_incl_tax": "2048.75",
+    "shipping_discount_excl_tax": "0",
+    "shipping_discount_incl_tax": "0",
+    "comment": null,
+    "person_ordering_firstname": "Reception",
+    "person_ordering_middlename": null,
+    "person_ordering_lastname": "Fertilitetssenteret",
+    "billing_firstname": "Fertilitetssenteret",
+    "billing_middlename": null,
+    "billing_lastname": "-",
+    "billing_company": "Fertilitetssenteret",
+    "billing_street": "Pilestredet Park 7",
+    "billing_postcode": "176",
+    "billing_city": "Oslo",
+    "billing_country_code": "NO",
+    "billing_email": "post@fertilitetssenteret.nhn.no",
+    "shipping_firstname": "Fertilitetssenteret",
+    "shipping_middlename": null,
+    "shipping_lastname": "-",
+    "shipping_company": "Fertilitetssenteret",
+    "shipping_street": "Pilestredet Park 7",
+    "shipping_postcode": "176",
+    "shipping_city": "Oslo",
+    "shipping_country_code": "NO",
+    "treatment_person": "",
+    "date_treatment": null,
+    "date_last_shipment": "2022-06-13",
+    "payment_method": "banktransfer",
+    "credit_card_masked_number": null,
+    "credit_card_type": null,
+    "link_payment": "https:\/\/shop.europeanspermbank.com\/dk\/redirect\/view?id=86269aa39f8db54cd69f4408e0e0a628",
+    "link_order_status": "https:\/\/shop.europeanspermbank.com\/dk\/",
+    "paid_by_email": "line_gt89@hotmail.com",
+    "paid_by_firstname": "Line",
+    "storage_order": false,
+    "virtual_order": false,
+    "items": [
+        {
+            "type": "donor_grouped_items",
+            "name": 25353,
+            "email_image": null,
+            "grouped_items": [
+                {
+                    "type": "straw",
+                    "row_total_incl_tax": 17820.4,
+                    "row_total_excl_tax": 17820.4,
+                    "row_tax": 0,
+                    "row_tax_rate": 0,
+                    "quantity": 4,
+                    "name": "25353",
+                    "straw_type": "iui",
+                    "mot": "20"
+                },
+                {
+                    "type": "pregnancy_slot",
+                    "row_total_incl_tax": 4097.5,
+                    "row_total_excl_tax": 4097.5,
+                    "row_tax": 0,
+                    "row_tax_rate": 0,
+                    "quantity": 1,
+                    "name": "25353",
+                    "treatment_country": "NO"
+                }
+            ]
+        },
+        {
+            "type": "pregnancy_slots",
+            "name": "Pregnancy Slot",
+            "grouped_items": [
+                {
+                    "type": "pregnancy_slot",
+                    "row_total_incl_tax": 4097.5,
+                    "row_total_excl_tax": 4097.5,
+                    "row_tax": 0,
+                    "row_tax_rate": 0,
+                    "quantity": 1,
+                    "name": "25353",
+                    "treatment_country": "NO"
+                }
+            ]
+        },
+        {
+            "type": "virtual",
+            "row_total_incl_tax": 4455.1,
+            "row_total_excl_tax": 4455.1,
+            "row_tax": 0,
+            "row_tax_rate": 0,
+            "quantity": 1,
+            "name": "Customs"
+        }
+    ]
+}

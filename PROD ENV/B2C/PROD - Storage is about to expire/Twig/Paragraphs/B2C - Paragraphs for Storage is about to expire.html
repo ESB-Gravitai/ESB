@@ -1,0 +1,44 @@
+<!-- Items conditional -->
+{% set orderEncoded = attribute(tokens, '{order}')  %}
+{% set order = orderEncoded| json_decode_html %} 
+{% set items = order.items %}
+
+<!-- START English -->
+{% if items is empty %}
+<!-- Content Section -->
+<mj-section padding="0px 0px 0px 0px" background-color="#ffffff">
+	<mj-column padding="0px 0px 0px 0px">
+	<mj-text css-class="em_padblr" padding="0px 35px 0px 35px" font-family="'helvetica neue', arial, sans-serif" font-size="14px" line-height="21px" color="#272A44">
+		<p>
+		<br>
+		Your CryoStorage with ID %storageId% expires on %storageExpireDate%.
+		</p>
+		<p> 
+		</p>
+		<p>Seeing as your CryoStorage does not contain any straws, you don't need to do anything.
+		</p>
+		<p> 
+		</p>
+		<p>Thank you for choosing us to help you on your fertility journey.
+		</p>
+	</mj-text>
+	</mj-column>
+</mj-section>
+{% else %}
+<!-- Content Section -->
+<mj-section padding="0px 0px 0px 0px" background-color="#ffffff">
+	<mj-column padding="0px 0px 0px 0px">
+	<mj-text css-class="em_padblr" padding="0px 35px 0px 35px" font-family="'helvetica neue', arial, sans-serif" font-size="14px" line-height="21px" color="#272A44">
+		<p>
+		<br>
+		Your CryoStorage with ID %storageId% expires %storageExpireDate%.
+		</p>
+		<p> 
+		</p>
+		<p>We've listed the contents of your CryoStorage below.
+		</p>
+	</mj-text>
+	</mj-column>
+</mj-section>
+{% endif %}
+<!-- END English -->

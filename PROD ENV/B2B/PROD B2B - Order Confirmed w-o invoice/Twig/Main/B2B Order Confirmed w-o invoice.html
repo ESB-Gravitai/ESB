@@ -1,0 +1,581 @@
+<style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+        -webkit-text-size-adjust: 100% !important;
+        -ms-text-size-adjust: 100% !important;
+        -webkit-font-smoothing: antialiased !important;
+    }
+    img {
+        border: 0 !important;
+        outline: none !important;
+    }
+    p {
+        Margin: 0px !important;
+        Padding: 0px !important;
+    }
+    table {
+        border-collapse: collapse;
+        mso-table-lspace: 0px;
+        mso-table-rspace: 0px;
+    }
+    td, a, span {
+        border-collapse: collapse;
+        mso-line-height-rule: exactly;
+    }
+    .ExternalClass * {
+        line-height: 100%;
+    }
+    .em_defaultlink a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .em_defaultlink1 a {
+        color: inherit;
+        text-decoration: underline;
+    }
+    .em_g_img + div {
+        display: none;
+    }
+    a[x-apple-data-detectors], u + .em_body a, #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+    }
+    .em_hover a:hover {
+        background-color: #7BB4CB !important;
+        color: #ffffff !important;
+    }
+     @media only screen and (max-width:599px) {
+    .em_main_table {
+        width: 100% !important;
+    }
+    .em_wrapper {
+        width: 100% !important;
+    }
+    .em_hide {
+        display: none !important;
+    }
+    .em_full_img img {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .em_center {
+        text-align: center !important;
+    }
+    .em_side10 {
+        width: 10px !important;
+    }
+    .em_aside10 {
+        padding: 0px 10px !important;
+    }
+    .em_side15 {
+        width: 15px !important;
+    }
+    .em_aside15 {
+        padding: 0px 15px !important;
+    }
+    .em_ptop {
+        padding-top: 20px !important;
+    }
+    .em_pbottom {
+        padding-bottom: 20px !important;
+    }
+    .em_h20 {
+        height: 20px !important;
+        font-size: 1px!important;
+        line-height: 1px!important;
+    }
+    .em_h30 {
+        height: 30px !important;
+    }
+    .em_mob_block {
+        display: block !important;
+    }
+    .em_hauto {
+        height: auto !important;
+    }
+    .em_clear {
+        clear: both !important;
+        width: 100% !important;
+        display: block !important;
+    }
+    u + .em_body .em_full_wrap {
+        width: 100% !important;
+        width: 100vw !important;
+    }
+    .em_ptbrl {
+        padding: 20px 15px !important;
+    }
+    .em_ptrl { padding:20px 15px 0px 15px !important;}
+    .em_side151 { padding:20px 15px 20px 15px !important;}
+    }
+    @media screen and (max-width: 374px) {
+    .em_font_1 { font-size:9px !important; line-height:18px !important;}
+    .em_font_1 { font-size:11px !important; line-height:21px !important;} 
+    }
+</style>
+    
+    <!-- START : ORDER -->
+    {% set orderEncoded = attribute(tokens, '{order}')  %}
+    {% set order = orderEncoded| json_decode_html %} 
+    <!-- START : ORDER -->
+
+    <!-- START: Preferred locale -->
+    {% set preferredLocale = contact.preferred_locale %}
+    <!-- END: Preferred locale -->
+
+    <!-- START : SET CURRENCY SYMBOLS -->
+    {% set currency = order.currency %}
+    {% if currency == "EUR" %}
+        <!-- Currency Symbol -->
+        {% set currencySymbol = "€" %}
+        <!-- Grand Total -->
+        {% set grandTotal = currencySymbol ~ order.grand_total|number_format(2) %}
+        <!-- Subtotal -->
+        {% set subtotalExclTax =  currencySymbol ~ order.subtotal_excl_tax|number_format(2) %}
+        <!-- Tax -->
+        {% set taxTotal =  currencySymbol ~ order.tax_total|number_format(2) %}
+    {% else %}
+        {% if currency == "DKK" %}
+            <!-- Currency Symbol -->
+            {% set currencySymbol = "Kr." %}
+            <!-- Grand Total -->
+            {% set grandTotal = order.grand_total|number_format(2, ',', '.') ~ ' ' ~ currencySymbol %}
+            <!-- Subtotal -->
+            {% set subtotalExclTax = order.subtotal_excl_tax|number_format(2, ',', '.') ~ ' ' ~ currencySymbol %}
+            <!-- Tax -->
+            {% set taxTotal = order.tax_total|number_format(2, ',', '.') ~ ' ' ~ currencySymbol %}
+        {% endif %}
+    {% endif %}
+    <!-- END : SET CURRENCY SYMBOLS -->
+
+    <!-- START: storage_order -->
+    {% set storage_order = order.storage_order %}
+    <!-- END: storage_order --> 
+
+    <!-- START: URLs -->
+    {% set link_order_status = 'https://www.europeanspermbank.com/en-int/my-page/order-history' %}
+    <!-- END: URLs -->
+
+    <!-- START English -->
+    <!-- == Body Section == -->
+    <table border="0" cellspacing="0" cellpadding="0" class="em_full_wrap" bgcolor="#F2F7FA" style="table-layout:fixed; background-color:#F2F7FA; width:100%;">
+        <tr>
+        <td align="center" valign="top"><table align="center" border="0" cellspacing="0" cellpadding="0" class="em_main_table" bgcolor="#ffffff" style="width:100%; table-layout:fixed; background-color:#ffffff;">
+            <tr>
+                <td align="center" valign="top"><table border="0" cellspacing="0" cellpadding="0" align="center" style="width:100%;" class="em_wrapper">
+                <!-- START : DETAILS -->
+                <tr>
+                    <td align="center" valign="top">
+                        
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                        <tr>
+                            <td class="em_defaultlink" align="left" valign="top" style="line-height:22px;font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:18px;color:#272A44; padding:0px 0px 16px 0px;">DETAILS</td>
+                        </tr>
+                        <tr>
+                            <td height="1" style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;" bgcolor="#cccccc"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="top" style="padding-top:15px; padding-bottom:5px;" class="em_ptop"><table border="0" cellspacing="0" cellpadding="0" align="left">
+                                <tr>
+                                <td class="em_defaultlink" align="left" valign="top" style="padding-bottom:5px;line-height:14px; font-weight:bold; color:#272A44; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px;">Order number</td>
+                                </tr>
+                                <tr>
+                                <td class="em_defaultlink" align="left" style="padding-bottom:10px; font-family: 'helvetica neue', arial, sans-serif;line-height:21px;color:#272A44;font-size:14px;">{{ order.increment_id }}</td>
+                                </tr>
+                            </table>
+                            <table border="0" cellspacing="0" cellpadding="0" align="right">
+                                <tr>
+                                <td class="em_defaultlink" align="right" valign="top" style="padding-bottom:5px;line-height:14px; font-weight:bold; color:#272A44; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px;">Order date</td>
+                                </tr>
+                                <tr>
+                                <td class="em_defaultlink" align="right" style="padding-bottom:10px; font-family: 'helvetica neue', arial, sans-serif;line-height:21px;color:#272A44;font-size:14px;">
+                                    <!-- Date Order == null -->
+                                    {% if order.date_order != null %}	
+                                        {{ (order.date_order != null) ?  order.date_order|split('-')|reverse|join('/') : 'N/A' }}
+                                    {% else %}
+                                        N/A
+                                    {% endif %}      
+                                </td>
+                                </tr>
+                            </table></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="top" style="padding-top:0px; padding-bottom:15px;" class="em_ptop"><table border="0" cellspacing="0" cellpadding="0" align="left">
+                                <tr>
+                                    <td class="em_defaultlink" align="left" valign="top" style="padding-bottom:5px;line-height:14px; font-weight:bold; color:#272A44; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px;">Your Reference</td>
+                                </tr>
+                                <tr>
+                                    <td class="em_defaultlink" align="left" style="padding-bottom:10px; font-family: 'helvetica neue', arial, sans-serif;line-height:21px;color:#272A44;font-size:14px;">
+                                    <!-- Your Reference == null -->
+                                    {% if order.person_ordering_firstname == null %}	
+                                            N/A
+                                        {% else %}
+                                            {{ order.person_ordering_firstname }} {{ order.person_ordering_lastname }}
+                                    {% endif %}
+                                    </td>
+                                </tr>
+                                </table>
+                                <table border="0" cellspacing="0" cellpadding="0" align="right">
+                                <tr>
+                                    <td class="em_defaultlink" align="right" valign="top" style="padding-bottom:5px;line-height:14px; font-weight:bold; color:#272A44; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px;">
+                                        <!-- Date Treatment == null -->
+                                        {% if order.date_treatment == null %}	
+                                                Last Shipment Date
+                                            {% else %}
+                                                Treatment Date
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="em_defaultlink" align="right" style="padding-bottom:10px; font-family: 'helvetica neue', arial, sans-serif;line-height:21px;color:#272A44;font-size:14px;">
+                                    <!-- Date Treatment == null -->
+                                    {% if order.date_treatment == null %}	
+                                            {{ (order.date_last_shipment != null) ?  order.date_last_shipment|split('-')|reverse|join('/') : 'N/A' }}
+                                        {% else %}
+                                            {{ (order.date_treatment != null) ?  order.date_treatment|split('-')|reverse|join('/') : 'N/A' }}
+                                    {% endif %}
+                                    </td>
+                                </tr>
+                                </table></td>
+                            </tr>
+                        <tr>
+                            <td align="center" valign="top"  class="em_hover"><table width="148" border="0" cellspacing="0" cellpadding="0" align="center" style="width:148px;">
+                                <tr>
+                                <td align="center" valign="middle" height="37" style=" font-size:14px; font-family: 'helvetica neue', arial, sans-serif;font-weight:bold; letter-spacing: 0.5px; display:block; border:2px solid #7BB4CB; border-radius:5px; color:#7BB4CB;  font-family: 'Arial', sans-serif; height:37px;" class="em_defaultlink"><a href="{{ link_order_status }}" target="_blank" style="text-decoration:none; color:#7BB4CB; line-height:37px; display:block;">Order overview</a></td>
+                                </tr>
+                            </table></td>
+                        </tr>
+                        <tr>
+                            <td class="em_defaultlink em_ptop" align="left" valign="top" style="line-height:22px;font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:18px;color:#272A44; padding:40px 0px 17px 0px;">YOUR ORDER</td>
+                        </tr>
+                        <tr>
+                            <td height="1" style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;" bgcolor="#cccccc"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                        </tr>
+
+                        <!-- START: DONOR GROUPED ITEMS -->
+                        {% for item in order.items %} 
+                            {% set counter = loop.index - 1 %}
+                            {% set items = order.items %}
+                            {% if attribute(items, counter).type == "donor_grouped_items"%} 
+                                <!-- START: DONOR IMAGE AND NAME -->
+                                <tr>
+                                <td align="center" valign="top" style="padding:26px 0px;">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                    <tr >
+                                        <td align="left" valign="top" width="60" style="width:60px;"><img class="rounded_img" src="{{ (attribute(items, counter).email_image) ? attribute(items, counter).email_image : 'https://europeanspermbank.email/asset/5:default-avatarjpg1' }}" alt="" style="display:block; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:12px; line-height:15px; max-width:60px;border-radius: 50%;" width="60" height="60" /></td>
+                                        <td width="20" style="width:20px;"> </td>
+                                        <td align="center" valign="top">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="left">
+                                        
+                                        <tr>
+                                <td height="15" style="height:15px; line-height:0px; font-size:0px;"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                                </tr>
+                                        <tr>
+                                    <td class="em_defaultlink" align="left"  valign="top" style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">{{attribute(items, counter).name}}</td></tr>
+                                    <tr>
+                                                        <td height="20" style="height:20px; line-height:0px; font-size:0px;"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                                                        </tr>
+                                    </table>
+    
+                                        </td>
+                                        
+                                    </tr>
+                                    </table></td>
+                                </tr>
+                                <!-- END: DONOR IMAGE AND NAME -->
+                                <!-- START: FOR GROUPED ITEMS LOOP -->
+                                <tr>
+                                <td align="center" valign="top">
+    
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                    <!-- START: ORDER ITEMS HEADER -->
+                                    {% for subitems in attribute(items, counter).grouped_items %} 
+                                            {% set ordercounter = loop.index  %}
+                                            {% set orderitems = subitems %}      
+    
+                                            {% if loop.first %} 
+                                                <tr>
+                                                    <td class="em_defaultlink  em_font_2" align="left" valign="top" style="width: 50%; line-height:24px; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px; font-weight:bold;color:#272A44;">Product</td>
+                                                    <td class="em_defaultlink em_font_2" align="right" valign="top" style="width: 10%; line-height:24px; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px; font-weight:bold;color:#272A44;">Qty</td>
+                                                    <td class="em_defaultlink em_font_2" align="right" valign="top" style="width: 20%; line-height:24px; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px; font-weight:bold;color:#272A44;"></td> <!--column for refund -->
+                                                    <td class="em_defaultlink em_font_2" align="right" valign="top" style="width: 20%; line-height:24px; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px; font-weight:bold;color:#272A44;">Amount</td>
+                                                </tr>
+                                            {% endif %}
+                                            <!-- END: ORDER ITEMS HEADER -->
+
+                                            <!-- START: STRAW SLOT-->
+                                            {% if subitems.type == "straw" %} 
+                                                <tr>
+                                                    <td class="em_defaultlink em_font_1" align="left" valign="top" style="width: 50%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;">{{ subitems.straw_type|upper }} MOT {{ subitems.mot }}+</td>
+                                                    <td class="em_defaultlink em_font_1" align="right" valign="top" style="width: 10%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;">{{ subitems.quantity|number_format(0) }}</td>
+                                                    <td class="em_defaultlink em_font_1" align="right" valign="top" style="width: 20%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;"></td> <!--column for refund -->
+                                                    <td class="em_defaultlink em_font_1" align="right" valign="top" style="width: 20%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;">
+                                                        <!-- Currency format -->
+                                                        {% if currency == "EUR" %}
+                                                                <!-- Subitems total incl tax -->
+                                                                {% set subitemsTotalInclTax =  currencySymbol ~ subitems.row_total_excl_tax|number_format(2) %}
+                                                                {{ subitemsTotalInclTax }}
+                                                        {% else %}
+                                                            {% if currency == "DKK" %}
+                                                                <!-- Subitems total incl tax -->
+                                                                {% set subitemsTotalInclTax =  subitems.row_total_excl_tax|number_format(2, ',', '.')  ~ ' ' ~ currencySymbol %}
+                                                                {{ subitemsTotalInclTax }}
+                                                            {% endif %}
+                                                        {% endif %}
+                                                    </td>
+                                                </tr>
+                                            {% endif %}
+                                            <!-- END: STRAW SLOT-->
+
+                                            <!-- START: PREGNANCY SLOT-->
+                                            {% if subitems.type == "pregnancy_slot" %} 
+                                                <tr>
+                                                    <td class="em_defaultlink  em_font_1" align="left" valign="top" style="width: 50%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;">Pregnancy Slot, {{ subitems.treatment_country|upper }}</td>
+                                                    <td class="em_defaultlink  em_font_1" align="right" valign="top" style="width: 10%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;">{{ subitems.quantity|number_format(0) }}</td>
+                                                    <td class="em_defaultlink  em_font_1" align="right" valign="top" style="width: 20%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;"></td><!--column for refund -->
+                                                    <td class="em_defaultlink  em_font_1" align="right" valign="top" style="width: 20%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;">
+                                                        <!-- Currency format -->
+                                                        {% if currency == "EUR" %}
+                                                                <!-- Subitems total incl tax -->
+                                                                {% set subitemsTotalInclTax =  currencySymbol ~ subitems.row_total_excl_tax|number_format(2) %}
+                                                                {{ subitemsTotalInclTax }}
+                                                        {% else %}
+                                                            {% if currency == "DKK" %}
+                                                                <!-- Subitems total incl tax -->
+                                                                {% set subitemsTotalInclTax =  subitems.row_total_excl_tax|number_format(2, ',', '.')  ~ ' ' ~ currencySymbol %}
+                                                                {{ subitemsTotalInclTax }}
+                                                            {% endif %}
+                                                        {% endif %}
+                                                    </td>
+                                                </tr>
+                                            {% endif %}
+                                            <!-- END: PREGNANCY SLOT-->
+
+                                            <!-- START: SHIPMENT SLOT -->
+                                            {% if subitems.type == "shipment" %} 
+                                                <tr>
+                                                    <td class="em_defaultlink em_font_1" align="left" valign="top" style="width: 50%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;">{{ subitems.straw_type|upper }} MOT {{ subitems.mot }}+</td>
+                                                    <td class="em_defaultlink em_font_1" align="right" valign="top" style="width: 10%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;">{{ subitems.quantity|number_format(0) }}</td>
+                                                    <td class="em_defaultlink em_font_1" align="right" valign="top" style="width: 20%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;"></td> <!--column for refund -->
+                                                    <td class="em_defaultlink em_font_1" align="right" valign="top" style="width: 20%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;">
+                                                        <!-- Currency format -->
+                                                        {% if currency == "EUR" %}
+                                                                <!-- Subitems total incl tax -->
+                                                                {% set subitemsTotalInclTax =  currencySymbol ~ subitems.row_total_excl_tax|number_format(2) %}
+                                                                {{ subitemsTotalInclTax }}
+                                                        {% else %}
+                                                            {% if currency == "DKK" %}
+                                                                <!-- Subitems total incl tax -->
+                                                                {% set subitemsTotalInclTax =  subitems.row_total_excl_tax|number_format(2, ',', '.')  ~ ' ' ~ currencySymbol %}
+                                                                {{ subitemsTotalInclTax }}
+                                                            {% endif %}
+                                                        {% endif %}
+                                                    </td>
+                                                </tr>
+                                            {% endif %}
+                                            <!-- END: SHIPMENT SLOT -->
+                                    {% endfor %}
+                                    </table>
+                                    
+                                </td>
+                                </tr> 
+                                <!-- END: GROUPED ITEMS LOOP -->
+                            {% endif %} <!--if donor group -->
+    
+                        <!-- END: DONOR GROUPED ITEMS -->
+    
+                            <!-- START: ADDITIONAL / VIRTUAL ITEM -->
+                            {% if attribute(items, counter).type == "virtual"%}
+                                <tr>
+                                <td align="center" valign="top" style="padding:30px 0px;"><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                    <tr>
+                                        <td class="em_defaultlink em_font_2" align="left" valign="top" style="width: 50%; line-height:24px; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px; font-weight:bold;color:#272A44;">Product</td>
+                                        <td class="em_defaultlink em_font_2" align="right" valign="top" style="width: 10%; line-height:24px; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px; font-weight:bold;color:#272A44;">Qty</td>
+                                        <td class="em_defaultlink em_font_2" align="right" valign="top" style="width: 20%; line-height:24px; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px; font-weight:bold;color:#272A44;"></td><!--column for refund -->
+                                        <td class="em_defaultlink em_font_2" align="right" valign="top" style="width: 20%; line-height:24px; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px; font-weight:bold;color:#272A44;">Amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="em_defaultlink  em_font_1" align="left" valign="top" style="width: 50%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;">{{attribute(items, counter).name}}</td>
+                                        <td class="em_defaultlink  em_font_1" align="right" valign="top" style="width: 10%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;">x {{attribute(items, counter).quantity|number_format(0)}}</td>
+                                        <td class="em_defaultlink  em_font_1" align="right" valign="top" style="width: 20%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;"></td><!--column for refund -->
+                                        <td class="em_defaultlink  em_font_1" align="right" valign="top" style="width: 20%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;">
+                                            <!-- Currency format -->
+                                            {% if currency == "EUR" %}
+                                                    <!-- Subitems total incl tax -->
+                                                    {% set virtualTotalInclTax =  currencySymbol ~ attribute(items, counter).row_total_excl_tax|number_format(2) %}
+                                                    {{ virtualTotalInclTax }}
+                                            {% else %}
+                                                {% if currency == "DKK" %}
+                                                    <!-- Subitems total incl tax -->
+                                                    {% set virtualTotalInclTax =  attribute(items, counter).row_total_excl_tax|number_format(2, ',', '.')  ~ ' ' ~ currencySymbol %}
+                                                    {{ virtualTotalInclTax }}
+                                                {% endif %}
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    
+                                    </table></td>
+                                </tr>
+                            {% endif %} <!--If virtual item -->
+                            <!-- END: ADDITIONAL / VIRTUAL ITEM -->
+
+                            <!-- START: ADDITIONAL / SIMPLE -->
+                            {% if attribute(items, counter).type == "simple"%}
+                            <tr>
+                                <td align="center" valign="top" style="padding:30px 0px 0px 0px;"><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+
+                                    <tr>
+                                        <td class="em_defaultlink  em_font_2" align="left" valign="top" style="width: 50%; line-height:24px; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px; font-weight:bold;color:#272A44;">Product</td>
+                                        <td class="em_defaultlink em_font_2" align="right" valign="top" style="width: 10%; line-height:24px; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px; font-weight:bold;color:#272A44;">Qty</td>
+                                        <td class="em_defaultlink em_font_2" align="right" valign="top" style="width: 20%; line-height:24px; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px; font-weight:bold;color:#272A44;"></td> <!--column for refund -->
+                                        <td class="em_defaultlink em_font_2" align="right" valign="top" style="width: 20%; line-height:24px; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px; font-weight:bold;color:#272A44;">Amount</td>                                               
+                                    </tr>
+
+                                    <tr>
+                                        <td class="em_defaultlink  em_font_1" align="left" valign="top" style="width: 50%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;">{{attribute(items, counter).name}}</td>
+                                        <td class="em_defaultlink  em_font_1" align="right" valign="top" style="width: 10%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;">x {{attribute(items, counter).quantity|number_format(0)}}</td>
+                                        <td class="em_defaultlink  em_font_1" align="right" valign="top" style="width: 20%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;"></td><!--column for refund -->
+
+                                        <td class="em_defaultlink  em_font_1" align="right" valign="top" style="width: 20%; font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px;">
+                                            <!-- Currency format -->
+                                            {% if currency == "EUR" %}
+                                                    <!-- Subitems total incl tax -->
+                                                    {% set simpleTotalExclTax =  currencySymbol ~ attribute(items, counter).row_total_excl_tax|number_format(2) %}
+                                                    {{ simpleTotalExclTax }}
+                                            {% else %}
+                                                {% if currency == "DKK" %}
+                                                    <!-- Subitems total incl tax -->
+                                                    {% set simpleTotalExclTax =  attribute(items, counter).row_total_excl_tax|number_format(2, ',', '.')  ~ ' ' ~ currencySymbol %}
+                                                    {{ simpleTotalExclTax }}
+                                                {% endif %}
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            {% endif %} <!--If SIMPLE -->
+                            <!-- END: ADDITIONAL / SIMPLE -->
+
+                        {% endfor %} <!--Order Items LOOP -->
+    
+                        <!-- START: SHIPPING AND TOTALS -->
+                        <tr>
+                            <td height="1" style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;" bgcolor="#cccccc"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="top" style="padding:14px 0px 24px 0px;"><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+
+                                <tr>
+                                    <td class="em_defaultlink  em_font_1" align="left" valign="top" style="font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px; font-weight:bold;">Subtotal</td>
+                                    <td class="em_defaultlink  em_font_1" align="right" valign="top" style="font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px; font-weight:bold;">
+                                        {{subtotalExclTax}}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="em_defaultlink  em_font_1" align="left" valign="top" style="font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px; font-weight:bold;">Tax</td>
+                                    <td class="em_defaultlink  em_font_1" align="right" valign="top" style="font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px; font-weight:bold;">
+                                        {{taxTotal}}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="em_defaultlink  em_font_1" align="left" valign="top" style="font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px; font-weight:bold;">Total</td>
+                                    <td class="em_defaultlink  em_font_1" align="right" valign="top" style="font-family: 'helvetica neue', arial, sans-serif;line-height:28px;color:#272A44;font-size:14px; font-weight:bold;">
+                                        {{grandTotal}}
+                                    </td>
+                                </tr>
+                            </table></td>
+                        </tr>
+                        <!-- END: SHIPPING AND TOTALS -->
+
+                        <!-- START : BILLING ADDRESS -->
+                        <tr>
+                            <td class="em_defaultlink" align="left" valign="top" style="line-height:22px;font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:18px;color:#272A44; padding:15px 0px 16px 0px;">BILLING ADDRESS</td>
+                        </tr>
+                        <tr>
+                            <td height="1" style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;" bgcolor="#cccccc"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="top" style="padding:0px;">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                    <tr>
+                                        <!-- <td align="left" valign="top">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="left">
+                                                <tr>
+                                                <td height="15" style="height:15px; line-height:0px; font-size:0px;"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="em_defaultlink" align="left"  valign="top" style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:14px; font-weight:normal;">
+                                                        
+                                                        %Clinic_Billing_Address% ?<br>
+                                                        <strong>{{ order.billing_firstname }} {{ order.billing_lastname }}</strong> <br>
+                                                        {{ order.billing_street }}<br>
+                                                        {{ order.billing_postcode }} {{ order.billing_city }}<br>
+                                                        {{ order.billing_country_code }}<br>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="20" style="height:20px; line-height:0px; font-size:0px;"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                                                </tr>
+                                            </table>
+                                        </td> -->
+                                        <!-- START: Storage order conditional -->
+                                        {% if order.storage_order != true %}
+                                                <td align="left" valign="top">
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="left">
+                                                        <tr>
+                                                        <td height="10" style="height:10px; line-height:0px; font-size:0px;"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="em_defaultlink" align="left"  valign="top" style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:14px; font-weight:normal;">
+                                                                <strong>{{ order.shipping_firstname }} {{ order.shipping_lastname }}</strong> <br>
+                                                                {{ order.shipping_street }}<br>
+                                                                {{ order.shipping_postcode }} {{ order.shipping_city }}<br>
+                                                                {{ order.shipping_country_code }}<br>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="5" style="height:5px; line-height:0px; font-size:0px;"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            {%else%}
+                                                <td align="left" valign="top">
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="left">
+                                                        <tr>
+                                                        <td height="10" style="height:10px; line-height:0px; font-size:0px;"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="em_defaultlink" align="left"  valign="top" style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:14px; font-weight:normal;">
+                                                                <strong>Your CryoStorage will be placed in Denmark</strong>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="5" style="height:5px; line-height:0px; font-size:0px;"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                        <!-- END: Storage order conditional -->
+                                        {% endif %}
+                                            
+                                        </tr>
+                                </table></td>
+                            </tr>
+                            <!-- END : BILLING ADDRESS -->
+                        </table>
+                    </td>
+                    </tr>
+                </table></td>
+            </tr>
+            </table></td>
+        </tr>
+    </table>
+    <!-- == //Body Section == -->
+    <!-- END English -->

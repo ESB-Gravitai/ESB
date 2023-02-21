@@ -1,0 +1,233 @@
+<title>{subject}
+</title>
+<mjml>
+  <mj-head>
+	<!--//Style Start Here-->
+	<mj-style>
+	  @media all and (max-width:599px) {
+	  .em_padtblr20 {
+	  padding: 20px 15px 20px 15px !important;
+	  }
+	  .em_padblr {
+	  padding: 0px 15px 20px 15px !important;
+	  }
+	  .em_center div {
+	  text-align: center !important;
+	  }
+	  .em_pad1 {
+	  padding: 0px 15px 5px 15px !important;
+	  }
+	  .em_pad2 {
+	  padding: 0px 15px 5px 15px !important;
+	  }
+	  .em_pad11 {
+	  padding: 0px 15px 20px 15px !important;
+	  }
+	  .em_pad21 {
+	  padding: 0px 15px 20px 15px !important;
+	  }
+	  .em_font_1 {
+	  font-size: 10px !important;
+	  line-height: 18px !important;
+	  }
+	  .em_font_2 {
+	  font-size: 11px !important;
+	  line-height: 21px !important;
+	  }
+	  .em_aside15 {
+	  padding: 0px 15px 0px 15px !important;
+	  }
+	  .em_aside15_1 {
+	  padding: 5px 15px 20px 15px !important;
+	  }
+	  .em_hide {
+	  display: none !important;
+	  }
+	  .em_fontheader {
+	  font-size: 12px !important;
+	  line-height: 25px !important
+	  }
+	  }
+	</mj-style>
+	<!--//Style End Here-->
+  </mj-head>
+  <mj-body background-color="#F2F7FA">
+	<!-- Header Section -->
+	<!-- START: View in browser -->
+	<mj-section background-color="#fff" padding-top="0" padding-bottom="0">
+	  <mj-column>
+		<mj-text align="center" padding-top="20px" padding-bottom="0" font-size="12px">
+		  <p>Having difficulty viewing this email? 
+			<a href="{webview_url}" style="text-decoration:underline; color:#e75f48;">View in browser</a>
+		  </p>
+		</mj-text>
+	  </mj-column>
+	</mj-section>
+	<!-- END: View in browser -->
+	<mj-section padding="0px 0px 0px 0px" background-color="#ffffff">
+	  <mj-group>
+		<mj-column padding="0px 0px 0px 0px" width="50%">
+		  <mj-image css-class="em_padtblr20" align="left" padding="20px 10px 30px 35px" href="http://europeanspermbank.com/" width="200px" alt="GIVE LIFE | EUROPEAN SPERM • BANK" src="https://europeanspermbank.email/asset/8:esblogopng"/>
+		</mj-column>
+		<mj-column padding="0px 0px 0px 0px" width="50%">
+		  <mj-text css-class="em_padtblr20" align="right" padding="35px 35px 30px 10px" font-family="'helvetica neue', arial, sans-serif" font-size="14px" line-height="21px" font-weight="bold" color="#e75f48">
+			<span class="em_fontheader"><a href="{twigtemplate=34}" style="text-decoration:none; color:#e75f48" target="_blank">Need to contact us?</a></span>
+		  </mj-text>
+		</mj-column>
+	  </mj-group>
+	</mj-section>
+	<!-- //Header Section -->
+	<!-- Content Section -->
+	<mj-section padding="0px 0px 0px 0px" background-color="#ffffff">
+	</mj-section>
+	<!-- //Content Section -->
+	<!-- Content Section -->
+	<mj-section padding="0px 0px 0px 0px" background-color="#ffffff">
+	  <mj-column padding="0px 0px 0px 0px">
+		<mj-text css-class="em_padblr" padding="0px 35px 20px 35px" font-family="'helvetica neue', arial, sans-serif" font-size="14px" line-height="21px" color="#272A44">
+		  <p>Dear&nbsp;{contactfield=firstname},&nbsp;
+		  </p>
+		  <p>We noticed that you still have items in your cart. Perhaps you need more time to make a decision. We understand.
+		  </p>
+		  <p>Sometimes, our donors become unavailable at short notice. We can’t always know when or if they will donate again.
+		  </p>
+		  <p>Consider placing your order soon if you have found a donor you like.
+		  </p>
+		</mj-text>
+		<mj-button css-class="em_padblr" inner-padding="10px 27px" padding="0px 35px 40px 35px" border="2px solid #E75F48" color="#fff" background-color="#E75F48" border-radius="5px" href="https://www.europeanspermbank.com/en-int/cart" font-family="Arial, sans-serif" font-size="14px" font-weight="bold" letter-spacing="0.5px" padding-bottom="0px!important" align="left">Return to your cart
+		</mj-button>
+		<mj-text css-class="em_padblr" padding="0px 35px 20px 35px" font-family="'helvetica neue', arial, sans-serif" font-size="14px" line-height="21px" color="#272A44" padding-bottom="0!important">
+		  <p>
+			<em>You must be logged in to see the cart.</em>
+		  </p>
+		</mj-text>
+		<mj-text padding-left="25px" padding-right="25px" css-class="em_padblr" padding-top="0!important">
+		  <p>{twigtemplate=52}
+		  </p>
+		</mj-text>
+	  </mj-column>
+	</mj-section>
+	<!-- //Content Section -->
+	<!-- Detail Title Section -->
+	<mj-section padding="0px 0px 0px 0px" background-color="#ffffff">
+	</mj-section>
+	<!-- //Detail Title Section -->
+	<!-- Title Text Section -->
+	<mj-section padding="0px 0px 0px 0px" background-color="#ffffff">
+	</mj-section>
+	<!-- //Title Text Section -->
+	<!-- Table Content Section -->
+	<mj-section padding="0px 0px 0px 0px" background-color="#ffffff">
+	</mj-section>
+	<!-- //Table Content Section -->
+	<!-- CTA Section -->
+	<mj-section padding="0px 0px 0px 0px" background-color="#ffffff">
+	</mj-section>
+	<!-- //CTA Section -->
+	<!-- Product Refund Title Section -->
+	<mj-section padding="0px 0px 0px 0px" background-color="#ffffff">
+	</mj-section>
+	<!-- //Product Refund Title Section -->
+	<!-- Left Image Right Text Section -->
+	<mj-section padding="0px 0px 0px 0px" background-color="#ffffff">
+	</mj-section>
+	<!-- //Left Image Right Text Section -->
+	<!-- Product Table 1 Section -->
+	<mj-section padding="0px 0px 0px 0px" background-color="#ffffff">
+	</mj-section>
+	<!-- //Product Table 1 Section -->
+	<!-- Product Table 2 Section -->
+	<mj-section padding="0px 0px 0px 0px" background-color="#ffffff">
+	</mj-section>
+	<!-- //Product Table 2 Section -->
+	<!-- Divider Section 01 -->
+	<mj-section padding="0px 0px 0px 0px" background-color="#ffffff">
+	</mj-section>
+	<!-- //Divider Section 01 -->
+	<!-- Product Total Section -->
+	<mj-section padding="0px 0px 0px 0px" background-color="#ffffff">
+	</mj-section>
+	<!-- Product Total Section -->
+	<!-- Bottom Content Section  -->
+	<mj-section padding="0px 0px 0px 0px" background-color="#ffffff">
+	  <mj-column padding="0px 0px 0px 0px">
+		<mj-divider border-width="1px" css-class="em_padblr" padding="0px 35px 15px 35px" border-color="#cccccc" padding-left="35px" padding-right="35px" padding-bottom="0px!important"/>
+		<mj-text css-class="em_padblr" padding-top="0" padding-left="35px" padding-right="35px" line-height="23px">
+		  <p style="font-size:18px!important;">Can we help?
+		  </p>
+		  <p>We provide customer service in 11 languages, including English, German, French, and Danish. Get in touch if you need help finding the right donor or completing your order.
+		  </p>
+		</mj-text>
+	  </mj-column>
+	</mj-section>
+	<!-- //Bottom Content Section -->
+	<!-- Footer Section -->
+	<mj-section background-color="#272a44" padding-top="0" padding-bottom="0">
+	  <mj-column>
+		<mj-text font-size="14px" align="center" color="#fff" padding-top="10px" padding-bottom="10px">
+		  <p>
+			<strong>Reply to this email or call us on&nbsp;<a style="color:#e75f48!important;text-underline:none!important;text-decoration: none!important;" href="tel:+4538343600" target="_blank">+45 3834 3600&nbsp;</a></strong>
+		  </p>
+		</mj-text>
+	  </mj-column>
+	</mj-section>
+	<mj-section background-color="#fff" padding-bottom="8px" padding-top="10px">
+	  <mj-column>
+		<mj-image src="https://stage.europeanspermbank.email/asset/24:talkquotedoublepng" id="i1kk5" width="98px" padding-bottom="5px" padding-top="5px"/>
+		<mj-text css-class="em_padblr" align="center">
+		  <p>”My conversations with your team helped me a lot. Your empathy and kind, competent manner helped my husband and I find the right donor and made us feel comfortable during our treatment process.”
+		  </p>
+		  <p>&nbsp;
+		  </p>
+		  <p>- Janine, mother of donor-conceived twins
+		  </p>
+		</mj-text>
+	  </mj-column>
+	</mj-section>
+	<mj-section padding="0px 0px 0px 0px" background-color="#272a44">
+	  <mj-column padding="0px 0px 0px 0px" background-color="#272a44">
+		<mj-column width="100%" vertical-align="middle" padding="0px">
+		  <mj-social font-size="15px" icon-size="64px" mode="horizontal">
+			<mj-social-element href="https://www.facebook.com/europeanspermbank/" line-height="15px" background-color="#272a44" src="https://stage.europeanspermbank.email/themes/PROD-Mautic-ESB Template/img/facebook-logo-white.png?vda1f58d3">
+			</mj-social-element>
+			<mj-social-element href="https://www.instagram.com/europeanspermbank" line-height="15px" background-color="#272a44" src="https://stage.europeanspermbank.email/themes/PROD-Mautic-ESB Template/img/instagram-logo-white.png?vda1f58d3">
+			</mj-social-element>
+		  </mj-social>
+		</mj-column>
+		<mj-text padding="0px 35px 0px 35px" css-class="em_aside15" color="#ffffff" font-size="10px" line-height="15px" align="center" font-family="'helvetica neue', arial, sans-serif;">European Sperm Bank Aps
+		</mj-text>
+		<mj-text padding="5px 35px 30px 35px" css-class="em_aside15_1" color="#ffffff" font-size="10px" line-height="15px" align="center" font-family="'helvetica neue', arial, sans-serif;" padding-bottom="30px" padding-top="5px">
+		  <p>Stru‌ensee‌gade 9, 2nd Floor | 22‌00 Copen‌hagen N | Denmark | VAT:&nbsp;2750‌6373
+		  </p>
+		</mj-text>
+		<mj-text padding="0px 35px 0px 35px" css-class="em_aside15" color="#ffffff" font-size="10px" line-height="15px" align="center" font-family="'helvetica neue', arial, sans-serif;">
+		  <a href="tel:+4538343600" style="text-decoration:underline; color:#ffffff;">+45 3834 3600</a> | 
+		  <a href="mailto:info@europeanspermbank.com" style="text-decoration:underline; color:#ffffff;">info@europeanspermbank.com</a>
+		</mj-text>
+		<mj-text padding="40px 35px 40px 35px" css-class="em_padtblr20" color="#ffffff" font-size="10px" line-height="15px" align="center" font-family="'helvetica neue', arial, sans-serif;" padding-top="40px" padding-bottom="40px">
+		  <p>You receive this e-mail at 
+			<a href="mailto:{contactfield=email}" style="text-decoration:underline; color:#ffffff;">{contactfield=email}</a> because you created an account at 
+			<a href="http://europeanspermbank.com/" style="text-decoration:underline; color:#ffffff;">europeanspermbank.com</a>.
+			<br>
+			<br>
+			Should you no longer want to receive none-transactional emails from us, please
+			<br>
+			use the unsubscribe link to update your&nbsp;preferences.
+		  </p>
+		</mj-text>
+		<mj-column width="100%" vertical-align="middle" padding="0px">
+		  <mj-text padding="8px 0px 0px 0px" font-size="10px" align="center" color="#ffffff" font-family="'helvetica neue', arial, sans-serif;">
+			<a style="text-decoration:underline;color:#ffffff;" line-height="15px" font-family="'helvetica neue', arial, sans-serif;" font-size="10px" href="https://www.europeanspermbank.com/en-int/privacy-policy-for-customers">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a style="text-decoration:underline;color:#ffffff;" line-height="15px" font-family="'helvetica neue', arial, sans-serif;" font-size="10px" href="https://www.europeanspermbank.com/en-int/terms-and-conditions">Terms of sales</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a style="text-decoration:underline;color:#ffffff;" line-height="15px" font-family="'helvetica neue', arial, sans-serif;" font-size="10px" href="{unsubscribe_url}">Unsubscribe</a>
+		  </mj-text>
+		</mj-column>
+		<mj-text padding="15px 35px 25px 35px" css-class="em_padtblr20" color="#ffffff" font-size="10px" line-height="15px" align="center" font-family="'helvetica neue', arial, sans-serif;">
+		  © 2022 European Sperm Bank All&nbsp;rights&nbsp;reserved.
+		</mj-text>
+	  </mj-column>
+	</mj-section>
+	<!-- //Footer Section -->
+	{tracking_pixel}
+  </mj-body>
+</mjml>

@@ -1,0 +1,35 @@
+<!-- START : PAYMENT INFO -->
+{% set orderEncoded = attribute(tokens, '{order}')  %}
+{% set order = orderEncoded| json_decode_html %}
+
+<!-- START : SET PAYMENT METHOD -->
+{% set virtualOrder = order.virtual_order %}
+<!-- END : SET PAYMENT METHOD -->
+
+<!-- START English -->
+{% if virtualOrder == false %}
+    <p> 
+    </p>
+    <p>We just finished verifying your order details, and you're all set. Consider this our confirmation of your order {{order.increment_id}}.
+    </p>
+    <p> 
+    </p>
+    <p>We'll finalise your order shortly, and we'll let you know when it's ready.
+    </p>
+    <p> 
+    </p>
+    <p>In the meantime, if you need anything, please don't hesitate to get in touch. Simply call us, drop an email or use the chat on our website.
+    </p>
+{%endif%}
+
+{% if virtualOrder == true %}
+    <p> 
+    </p>
+    <p>We just finished verifying your order details, and you're all set. Consider this our confirmation of your order {{order.increment_id}}.
+    </p>
+    <p> 
+    </p>
+    <p>In the meantime, if you need anything, please don't hesitate to get in touch. Simply call us, drop an email or use the chat on our website.
+    </p>
+{%endif%}
+<!-- END English -->

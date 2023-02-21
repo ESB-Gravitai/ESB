@@ -1,0 +1,38 @@
+<!-- START : ORDER -->
+{% set orderEncoded = attribute(tokens, '{order}')  %}
+{% set order = orderEncoded| json_decode_html %}
+<!-- END : ORDER -->
+
+<!-- START : SET PAYMENT METHOD -->
+{% set paymentMethod = order.payment_method %}
+<!-- END : SET PAYMENT METHOD -->
+
+<!-- START: Preferred locale -->
+{% set preferredLocale = contact.preferred_locale %}
+<!-- END: Preferred locale -->
+
+<!-- START English -->
+    <!-- START: banktransfer -->
+    {% if paymentMethod == "banktransfer" %}
+        <p>
+            <br>
+            We just received your order, {{order.increment_id}}. In order for us to move ahead with your order, you need to complete payment. All details about your order are listed below.
+            <br>
+            <br>
+            Please complete your purchase by following the link below which will send you to our safe payment window. If you prefer to pay by bank transfer, you'll find the relevant details in the section further down.
+            <br>
+            <br>
+            We can't proceed with your order before we have received your payment. If we have not registered your payment within the next seven days, your order will be automatically cancelled.
+        </p>
+    {%endif%}
+    <!-- END: banktransfer -->
+
+    <!-- START: reepay_payment -->
+    {% if paymentMethod == "reepay_payment" %}
+        <p>
+            <br>
+            We just received your order, {{order.increment_id}}. We are checking that we have all the information needed to process your order. All details about your order are listed below. We will send you a new email when your order is confirmed.
+        </p>
+    {%endif%}
+    <!-- END: reepay_payment -->
+<!-- END English -->
