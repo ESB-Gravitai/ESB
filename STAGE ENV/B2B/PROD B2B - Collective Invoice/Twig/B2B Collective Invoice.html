@@ -6,20 +6,26 @@
         -ms-text-size-adjust: 100% !important;
         -webkit-font-smoothing: antialiased !important;
     }
+
     img {
         border: 0 !important;
         outline: none !important;
     }
+
     p {
         margin: 0px !important;
         padding: 0px !important;
     }
+
     table {
         border-collapse: collapse;
         mso-table-lspace: 0px;
         mso-table-rspace: 0px;
     }
-    td, a, span {
+
+    td,
+    a,
+    span {
         border-collapse: collapse;
         mso-line-height-rule: exactly;
     }
@@ -31,18 +37,24 @@
     .ExternalClass * {
         line-height: 100%;
     }
+
     .em_defaultlink a {
         color: inherit;
         text-decoration: none;
     }
+
     .em_defaultlink1 a {
         color: inherit;
         text-decoration: underline;
     }
-    .em_g_img + div {
+
+    .em_g_img+div {
         display: none;
     }
-    a[x-apple-data-detectors], u + .em_body a, #MessageViewBody a {
+
+    a[x-apple-data-detectors],
+    u+.em_body a,
+    #MessageViewBody a {
         color: inherit;
         text-decoration: none;
         font-size: inherit;
@@ -50,273 +62,374 @@
         font-weight: inherit;
         line-height: inherit;
     }
+
     .em_hover a:hover {
         background-color: #7bb4cb !important;
         color: #ffffff !important;
     }
-        @media only screen and (max-width:599px) {
-    .em_main_table {
-        width: 100% !important;
+
+    @media only screen and (max-width:599px) {
+        .em_main_table {
+            width: 100% !important;
+        }
+
+        .em_wrapper {
+            width: 100% !important;
+        }
+
+        .em_hide {
+            display: none !important;
+        }
+
+        .em_full_img img {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        .em_center {
+            text-align: center !important;
+        }
+
+        .em_side10 {
+            width: 10px !important;
+        }
+
+        .em_aside10 {
+            padding: 0px 10px !important;
+        }
+
+        .em_side15 {
+            width: 15px !important;
+        }
+
+        .em_aside15 {
+            padding: 0px 15px !important;
+        }
+
+        .em_ptop {
+            padding-top: 20px !important;
+        }
+
+        .em_pbottom {
+            padding-bottom: 20px !important;
+        }
+
+        .em_h20 {
+            height: 20px !important;
+            font-size: 1px !important;
+            line-height: 1px !important;
+        }
+
+        .em_h30 {
+            height: 30px !important;
+        }
+
+        .em_mob_block {
+            display: block !important;
+        }
+
+        .em_hauto {
+            height: auto !important;
+        }
+
+        .em_clear {
+            clear: both !important;
+            width: 100% !important;
+            display: block !important;
+        }
+
+        u+.em_body .em_full_wrap {
+            width: 100% !important;
+            width: 100vw !important;
+        }
+
+        .em_ptbrl {
+            padding: 20px 15px !important;
+        }
+
+        .em_ptrl {
+            padding: 20px 15px 0px 15px !important;
+        }
+
+        .em_side151 {
+            padding: 20px 15px 20px 15px !important;
+        }
     }
-    .em_wrapper {
-        width: 100% !important;
-    }
-    .em_hide {
-        display: none !important;
-    }
-    .em_full_img img {
-        width: 100% !important;
-        height: auto !important;
-    }
-    .em_center {
-        text-align: center !important;
-    }
-    .em_side10 {
-        width: 10px !important;
-    }
-    .em_aside10 {
-        padding: 0px 10px !important;
-    }
-    .em_side15 {
-        width: 15px !important;
-    }
-    .em_aside15 {
-        padding: 0px 15px !important;
-    }
-    .em_ptop {
-        padding-top: 20px !important;
-    }
-    .em_pbottom {
-        padding-bottom: 20px !important;
-    }
-    .em_h20 {
-        height: 20px !important;
-        font-size: 1px!important;
-        line-height: 1px!important;
-    }
-    .em_h30 {
-        height: 30px !important;
-    }
-    .em_mob_block {
-        display: block !important;
-    }
-    .em_hauto {
-        height: auto !important;
-    }
-    .em_clear {
-        clear: both !important;
-        width: 100% !important;
-        display: block !important;
-    }
-    u + .em_body .em_full_wrap {
-        width: 100% !important;
-        width: 100vw !important;
-    }
-    .em_ptbrl {
-        padding: 20px 15px !important;
-    }
-    .em_ptrl { padding:20px 15px 0px 15px !important;}
-    .em_side151 { padding:20px 15px 20px 15px !important;}
-    }
+
     @media screen and (max-width: 374px) {
-    .em_font_1 { font-size:9px !important; line-height:18px !important;}
-    .em_font_1 { font-size:11px !important; line-height:21px !important;} 
+        .em_font_1 {
+            font-size: 9px !important;
+            line-height: 18px !important;
+        }
+
+        .em_font_1 {
+            font-size: 11px !important;
+            line-height: 21px !important;
+        }
     }
 </style>
-    
-    <!-- START : ORDER -->
-    {% set orderEncoded = attribute(tokens, '{order}')  %}
-    {% set order = orderEncoded| json_decode_html %} 
-    <!-- END : ORDER -->
-    
-    <!-- START: Preferred locale -->
-    {% set preferredLocale = contact.preferred_locale %}
-    <!-- END: Preferred locale -->
-    
-    <!-- START : SET CURRENCY SYMBOLS -->
-    {% set currency = order.currency %}
-    {% if currency == "EUR" %}
-        <!-- Currency Symbol -->
-        {% set currencySymbol = "€" %}
-        <!-- Grand Total -->
-        {% set grandTotal = currencySymbol ~ order.grand_total|number_format(2) %}
-        <!-- Subtotal -->
-        {% set subtotalExclTax =  currencySymbol ~ order.subtotal_excl_tax|number_format(2) %}
-        <!-- Shipping Excl tax -->
-        {% set shippingExclTax =  currencySymbol ~ order.shipping_excl_tax|number_format(2) %}
-        <!-- Shipping Discount Amount -->
-        {% set shippingDiscountExclTax =  currencySymbol ~ order.shipping_discount_excl_tax|number_format(2) %}
-    {% else %}
-        {% if currency == "DKK" %}
-            <!-- Currency Symbol -->
-            {% set currencySymbol = "Kr." %}
-            <!-- Grand Total -->
-            {% set grandTotal = order.grand_total|number_format(2, ',', '.') ~ ' ' ~ currencySymbol %}
-            <!-- Subtotal -->
-            {% set subtotalExclTax = order.subtotal_excl_tax|number_format(2, ',', '.') ~ ' ' ~ currencySymbol %}
-            <!-- Shipping Excl tax -->
-            {% set shippingExclTax = order.shipping_excl_tax|number_format(2, ',', '.') ~ ' ' ~ currencySymbol %}
-            <!-- Shipping Discount Amount -->
-            {% set shippingDiscountExclTax = order.shipping_discount_excl_tax|number_format(2, ',', '.') ~ ' ' ~ currencySymbol %}
-        {% endif %}
-    {% endif %}
-    <!-- END : SET CURRENCY SYMBOLS -->
-    
-    <!-- START: storage_order -->
-    {% set storage_order = order.storage_order %}
-    <!-- END: storage_order -->
-    
-    <!-- START: URLs -->
-    {% set link_order_status = 'https://www.europeanspermbank.com/en-int/my-page/order-history' %}
-    <!-- END: URLs -->
-    
-    <!-- START English -->
-    <!-- == Body Section == -->
-    <table border="0" cellspacing="0" cellpadding="0" class="em_full_wrap" bgcolor="#F2F7FA" style="table-layout:fixed; background-color:#F2F7FA;width:100%; ">
-        <tr>
-            <td align="center" valign="top"><table align="center" border="0" cellspacing="0" cellpadding="0" class="em_main_table" bgcolor="#ffffff" style="width:100%; table-layout:fixed; background-color:#ffffff;">
+
+<!-- START : ORDER -->
+{% set orderEncoded = attribute(tokens, '{order}') %}
+{% set order = orderEncoded| json_decode_html %}
+<!-- END : ORDER -->
+
+<!-- START: Preferred locale -->
+{% set preferredLocale = contact.preferred_locale %}
+<!-- END: Preferred locale -->
+
+<!-- START : SET CURRENCY SYMBOLS -->
+{% set currency = order.currency %}
+{% if currency == "EUR" %}
+<!-- Currency Symbol -->
+{% set currencySymbol = "€" %}
+<!-- Grand Total -->
+{% set grandTotal = currencySymbol ~ order.grand_total|number_format(2) %}
+<!-- Subtotal -->
+{% set subtotalExclTax = currencySymbol ~ order.subtotal_excl_tax|number_format(2) %}
+<!-- Shipping Excl tax -->
+{% set shippingExclTax = currencySymbol ~ order.shipping_excl_tax|number_format(2) %}
+<!-- Shipping Discount Amount -->
+{% set shippingDiscountExclTax = currencySymbol ~ order.shipping_discount_excl_tax|number_format(2) %}
+{% else %}
+{% if currency == "DKK" %}
+<!-- Currency Symbol -->
+{% set currencySymbol = "Kr." %}
+<!-- Grand Total -->
+{% set grandTotal = order.grand_total|number_format(2, ',', '.') ~ ' ' ~ currencySymbol %}
+<!-- Subtotal -->
+{% set subtotalExclTax = order.subtotal_excl_tax|number_format(2, ',', '.') ~ ' ' ~ currencySymbol %}
+<!-- Shipping Excl tax -->
+{% set shippingExclTax = order.shipping_excl_tax|number_format(2, ',', '.') ~ ' ' ~ currencySymbol %}
+<!-- Shipping Discount Amount -->
+{% set shippingDiscountExclTax = order.shipping_discount_excl_tax|number_format(2, ',', '.') ~ ' ' ~ currencySymbol %}
+{% endif %}
+{% endif %}
+<!-- END : SET CURRENCY SYMBOLS -->
+
+<!-- START: storage_order -->
+{% set storage_order = order.storage_order %}
+<!-- END: storage_order -->
+
+<!-- START: URLs -->
+{% set link_order_status = 'https://www.europeanspermbank.com/en-int/my-page/order-history' %}
+<!-- END: URLs -->
+
+<!-- START English -->
+<!-- == Body Section == -->
+<table border="0" cellspacing="0" cellpadding="0" class="em_full_wrap" bgcolor="#F2F7FA"
+    style="table-layout:fixed; background-color:#F2F7FA;width:100%; ">
+    <tr>
+        <td align="center" valign="top">
+            <table align="center" border="0" cellspacing="0" cellpadding="0" class="em_main_table" bgcolor="#ffffff"
+                style="width:100%; table-layout:fixed; background-color:#ffffff;">
                 <tr>
-                <td align="center" valign="top"><table border="0" cellspacing="0" cellpadding="0" align="center" style="width:100%;" class="em_wrapper">
-                    <!-- START: PAYMENT INFO -->
-                    <tr>
-                        <td class="em_defaultlink" align="left" valign="top" style="line-height:22px;font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:18px;color:#272A44; padding:15px 0px 16px 0px;">PAYMENT INFO</td>
-                    </tr>
-                    <tr>
-                        <td height="1" style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;" bgcolor="#cccccc"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
-                    </tr>
-                    <tr>
-                        <td align="center" valign="top" style="padding:15px 0px;">
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
-                                <tr >
-                                    <td align="left">
-                                        <p class="em_defaultlink" align="left"  valign="top" style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">Total due for payment on {{ order.date_invoice_due|split('-')|reverse|join('/') }}</p>
-                                    </td>
-                                    <td align="right">
-                                        <p class="em_defaultlink" align="right"  valign="top" style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
-                                            {{grandTotal}}
-                                        </p>
-                                    </td>                                            
-                                </tr>
-                            </table>
-                        </td>
-                        </tr>
-                        <tr>
-                            <td height="1" style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;" bgcolor="#cccccc"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
-                        </tr>
-                        <tr>
-                            <td align="center" valign="top" style="padding:20px 0px;">
-                                <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
-                                    <tr >
-                                        <td align="left">
-                                            <p class="em_defaultlink" align="left"  valign="top" style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:14px; font-weight:normal;">
-                                                European Sperm Bank ApS<br>
-                                                IBAN: DK04 3000 4928 0272 01<br>
-                                                BIC/SWIFT: DABADKKK<br>
-                                                Danske Bank: Reg. no. 3001 Account no. 12782101<br>
-                                                <strong>Make sure to include {{ order.invoice_id }} in the transfer message.</strong>
-                                            </p>
-                                        </td>                                       
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <!-- END: PAYMENT INFO -->                
-                    
-                        <!-- START : DETAILS -->
-                        <tr>
-                            <td align="center" valign="top">
-                            
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
-                                <tr>
-                                <td class="em_defaultlink" align="left" valign="top" style="line-height:22px;font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:18px;color:#272A44; padding:0px 0px 16px 0px;">DETAILS</td>
-                                </tr>
-                                <tr>
-                                <td height="1" style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;" bgcolor="#cccccc"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
-                                </tr>
-                                <tr>
-                                <td align="center" valign="top" style="padding-top:15px; padding-bottom:5px;" class="em_ptop"><table border="0" cellspacing="0" cellpadding="0" align="left">
-                                    <tr>
-                                        <td class="em_defaultlink" align="left" valign="top" style="padding-bottom:5px;line-height:14px; font-weight:bold; color:#272A44; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px;">Invoice number</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="em_defaultlink" align="left" style="padding-bottom:10px; font-family: 'helvetica neue', arial, sans-serif;line-height:21px;color:#272A44;font-size:14px;">
-                                            <!-- Invoice number== null -->
-                                            {% if order.invoice_id != null %}	
-                                                {{ order.invoice_id }}
-                                            {% else %}
-                                                N/A
-                                            {% endif %}   
-                                        </td>
-                                    </tr>
-                                    </table>
-                                    <table border="0" cellspacing="0" cellpadding="0" align="right">
-                                    <tr>
-                                        <td class="em_defaultlink" align="right" valign="top" style="padding-bottom:5px;line-height:14px; font-weight:bold; color:#272A44; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px;">Invoice due date</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="em_defaultlink" align="right" style="padding-bottom:10px; font-family: 'helvetica neue', arial, sans-serif;line-height:21px;color:#272A44;font-size:14px;">    
-                                            <!-- Invoice due date == null -->
-                                            {% if order.date_order != null %}	
-                                                {{ (order.date_invoice_due != null) ?  order.date_invoice_due|split('-')|reverse|join('/') : 'N/A' }}
-                                            {% else %}
-                                                N/A
-                                            {% endif %}             
-                                        </td>
-                                    </tr>
-                                    </table></td>
-                                </tr>
-                                <tr>
-                                    <td align="center" valign="top" style="padding-top:0px; padding-bottom:15px;" class="em_ptop"><table border="0" cellspacing="0" cellpadding="0" align="left">
+                    <td align="center" valign="top">
+                        <table border="0" cellspacing="0" cellpadding="0" align="center" style="width:100%;"
+                            class="em_wrapper">
+                            <!-- START: PAYMENT INFO -->
+                            <tr>
+                                <td class="em_defaultlink" align="left" valign="top"
+                                    style="line-height:22px;font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:18px;color:#272A44; padding:15px 0px 16px 0px;">
+                                    PAYMENT INFO</td>
+                            </tr>
+                            <tr>
+                                <td height="1"
+                                    style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;"
+                                    bgcolor="#cccccc"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                        width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top" style="padding:15px 0px;">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
                                         <tr>
-                                        <td class="em_defaultlink" align="left" valign="top" style="padding-bottom:5px;line-height:14px; font-weight:bold; color:#272A44; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px;">Invoice total</td>
-                                        </tr>
-                                        <tr>
-                                        <td class="em_defaultlink" align="left" style="padding-bottom:10px; font-family: 'helvetica neue', arial, sans-serif;line-height:21px;color:#272A44;font-size:14px;">
-                                            <!-- Invoice total == null -->
-                                            {{ grandTotal }}	
+                                            <td align="left">
+                                                <p class="em_defaultlink" align="left" valign="top"
+                                                    style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                    Total due for payment on {{
+                                                    order.date_invoice_due|split('-')|reverse|join('/') }}</p>
+                                            </td>
+                                            <td align="right">
+                                                <p class="em_defaultlink" align="right" valign="top"
+                                                    style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                    {{grandTotal}}
+                                                </p>
                                             </td>
                                         </tr>
                                     </table>
-                                    <table border="0" cellspacing="0" cellpadding="0" align="right">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="1"
+                                    style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;"
+                                    bgcolor="#cccccc"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                        width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top" style="padding:20px 0px;">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
                                         <tr>
-                                        <td class="em_defaultlink" align="right" valign="top" style="padding-bottom:5px;line-height:14px; font-weight:bold; color:#272A44; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px;">
-                                            Download the Invoice
-                                        </td>
+                                            <td align="left">
+                                                <p class="em_defaultlink" align="left" valign="top"
+                                                    style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:14px; font-weight:normal;">
+                                                    European Sperm Bank ApS<br>
+                                                    IBAN: DK04 3000 4928 0272 01<br>
+                                                    BIC/SWIFT: DABADKKK<br>
+                                                    Danske Bank: Reg. no. 3001 Account no. 12782101<br>
+                                                    <strong>Make sure to include {{ order.invoice_id }} in the transfer
+                                                        message.</strong>
+                                                </p>
+                                            </td>
                                         </tr>
-                                        <tr>
-                                        <td class="em_defaultlink" align="right" style="padding-bottom:10px; font-family: 'helvetica neue', arial, sans-serif;line-height:21px;color:#272A44;font-size:14px;">
-                                            <a href="{{order.link_invoice}}" style="text-decoration: none;color:#7bb4cb;">Click here</a>
-                                        </td>
-                                        </tr>
-                                    </table></td>
-                                </tr>
-                                <tr>
-                                <td align="center" valign="top"  class="em_hover"><table width="148" border="0" cellspacing="0" cellpadding="0" align="center" style="width:148px;">
-                                    <tr>
-                                        <td align="center" valign="middle" height="37" style=" font-size:14px; font-family: 'helvetica neue', arial, sans-serif;font-weight:bold; letter-spacing: 0.5px; display:block; border:2px solid #7bb4cb; border-radius:5px; color:#7bb4cb;  font-family: 'Arial', sans-serif; height:37px;" class="em_defaultlink"><a href="{{link_order_status}}" target="_blank" style="text-decoration:none; color:#7bb4cb; line-height:37px; display:block;">Order overview</a></td>
-                                    </tr>
-                                    </table></td>
-                                </tr>
-                                        
-                                <tr>
-                                    <td><br><br></td>
-                                </tr>
-                                <tr>
-                                    <td height="1" style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;" bgcolor="#cccccc"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
-                                </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- END: PAYMENT INFO -->
 
-                                <!-- START : BILLING ADDRESS -->
-                                <tr>
-                                    <td class="em_defaultlink" align="left" valign="top" style="line-height:22px;font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:18px;color:#272A44; padding:15px 0px 16px 0px;">BILLING ADDRESS</td>
-                                    </tr>
-                                    <tr>
-                                    <td height="1" style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;" bgcolor="#cccccc"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
-                                    </tr>
-                                    <tr>
-                                    <td align="center" valign="top" style="padding:0px;">
-                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
-                                            <tr>
-                                                <!-- <td align="left" valign="top">
+                            <!-- START : DETAILS -->
+                            <tr>
+                                <td align="center" valign="top">
+
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                        <tr>
+                                            <td class="em_defaultlink" align="left" valign="top"
+                                                style="line-height:22px;font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:18px;color:#272A44; padding:0px 0px 16px 0px;">
+                                                DETAILS</td>
+                                        </tr>
+                                        <tr>
+                                            <td height="1"
+                                                style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;"
+                                                bgcolor="#cccccc"><img
+                                                    src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                    width="1" height="1" alt="" border="0" style="display:block;" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top"
+                                                style="padding-top:15px; padding-bottom:5px;" class="em_ptop">
+                                                <table border="0" cellspacing="0" cellpadding="0" align="left">
+                                                    <tr>
+                                                        <td class="em_defaultlink" align="left" valign="top"
+                                                            style="padding-bottom:5px;line-height:14px; font-weight:bold; color:#272A44; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px;">
+                                                            Invoice number</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="em_defaultlink" align="left"
+                                                            style="padding-bottom:10px; font-family: 'helvetica neue', arial, sans-serif;line-height:21px;color:#272A44;font-size:14px;">
+                                                            <!-- Invoice number== null -->
+                                                            {% if order.invoice_id != null %}
+                                                            {{ order.invoice_id }}
+                                                            {% else %}
+                                                            N/A
+                                                            {% endif %}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table border="0" cellspacing="0" cellpadding="0" align="right">
+                                                    <tr>
+                                                        <td class="em_defaultlink" align="right" valign="top"
+                                                            style="padding-bottom:5px;line-height:14px; font-weight:bold; color:#272A44; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px;">
+                                                            Invoice due date</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="em_defaultlink" align="right"
+                                                            style="padding-bottom:10px; font-family: 'helvetica neue', arial, sans-serif;line-height:21px;color:#272A44;font-size:14px;">
+                                                            <!-- Invoice due date == null -->
+                                                            {% if order.date_order != null %}
+                                                            {{ (order.date_invoice_due != null) ?
+                                                            order.date_invoice_due|split('-')|reverse|join('/') : 'N/A'
+                                                            }}
+                                                            {% else %}
+                                                            N/A
+                                                            {% endif %}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top"
+                                                style="padding-top:0px; padding-bottom:15px;" class="em_ptop">
+                                                <table border="0" cellspacing="0" cellpadding="0" align="left">
+                                                    <tr>
+                                                        <td class="em_defaultlink" align="left" valign="top"
+                                                            style="padding-bottom:5px;line-height:14px; font-weight:bold; color:#272A44; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px;">
+                                                            Invoice total</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="em_defaultlink" align="left"
+                                                            style="padding-bottom:10px; font-family: 'helvetica neue', arial, sans-serif;line-height:21px;color:#272A44;font-size:14px;">
+                                                            <!-- Invoice total == null -->
+                                                            {{ grandTotal }}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table border="0" cellspacing="0" cellpadding="0" align="right">
+                                                    <tr>
+                                                        <td class="em_defaultlink" align="right" valign="top"
+                                                            style="padding-bottom:5px;line-height:14px; font-weight:bold; color:#272A44; font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:12px;">
+                                                            Download the Invoice
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="em_defaultlink" align="right"
+                                                            style="padding-bottom:10px; font-family: 'helvetica neue', arial, sans-serif;line-height:21px;color:#272A44;font-size:14px;">
+                                                            <a href="{{order.link_invoice}}"
+                                                                style="text-decoration: none;color:#7bb4cb;">Click
+                                                                here</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top" class="em_hover">
+                                                <table width="148" border="0" cellspacing="0" cellpadding="0"
+                                                    align="center" style="width:148px;">
+                                                    <tr>
+                                                        <td align="center" valign="middle" height="37"
+                                                            style=" font-size:14px; font-family: 'helvetica neue', arial, sans-serif;font-weight:bold; letter-spacing: 0.5px; display:block; border:2px solid #7bb4cb; border-radius:5px; color:#7bb4cb;  font-family: 'Arial', sans-serif; height:37px;"
+                                                            class="em_defaultlink"><a href="{{link_order_status}}"
+                                                                target="_blank"
+                                                                style="text-decoration:none; color:#7bb4cb; line-height:37px; display:block;">Order
+                                                                overview</a></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><br><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td height="1"
+                                                style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;"
+                                                bgcolor="#cccccc"><img
+                                                    src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                    width="1" height="1" alt="" border="0" style="display:block;" />
+                                            </td>
+                                        </tr>
+
+                                        <!-- START : BILLING ADDRESS -->
+                                        <tr>
+                                            <td class="em_defaultlink" align="left" valign="top"
+                                                style="line-height:22px;font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:18px;color:#272A44; padding:15px 0px 16px 0px;">
+                                                BILLING ADDRESS</td>
+                                        </tr>
+                                        <tr>
+                                            <td height="1"
+                                                style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;"
+                                                bgcolor="#cccccc"><img
+                                                    src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                    width="1" height="1" alt="" border="0" style="display:block;" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top" style="padding:0px;">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                                                    align="center">
+                                                    <tr>
+                                                        <!-- <td align="left" valign="top">
                                                     <table width="100%" border="0" cellspacing="0" cellpadding="0" align="left">
                                                         <tr>
                                                         <td height="15" style="height:15px; line-height:0px; font-size:0px;"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
@@ -336,55 +449,81 @@
                                                     </table>
                                                 </td> -->
 
-                                                <!-- START: Storage order conditional -->
-                                                {% if order.storage_order != true %}
+                                                        <!-- START: Storage order conditional -->
+                                                        {% if order.storage_order != true %}
                                                         <td align="left" valign="top">
-                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="left">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
                                                                 <tr>
-                                                                <td height="15" style="height:15px; line-height:0px; font-size:0px;"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                                                                    <td height="15"
+                                                                        style="height:15px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" /></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="em_defaultlink" align="left"  valign="top" style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:14px; font-weight:normal;">
-                                                                        <strong>{{ order.shipping_firstname }} {{ order.shipping_lastname }}</strong> <br>
+                                                                    <td class="em_defaultlink" align="left" valign="top"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:14px; font-weight:normal;">
+                                                                        <strong>{{ order.shipping_firstname }} {{
+                                                                            order.shipping_lastname }}</strong> <br>
                                                                         {{ order.shipping_street }}<br>
-                                                                        {{ order.shipping_postcode }} {{ order.shipping_city }}<br>
+                                                                        {{ order.shipping_postcode }} {{
+                                                                        order.shipping_city }}<br>
                                                                         {{ order.shipping_country_code }}<br>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td height="5" style="height:5px; line-height:0px; font-size:0px;"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                                                                    <td height="5"
+                                                                        style="height:5px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" /></td>
                                                                 </tr>
                                                             </table>
                                                         </td>
-                                                    {%else%}
+                                                        {%else%}
                                                         <td align="left" valign="top">
-                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="left">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
                                                                 <tr>
-                                                                <td height="15" style="height:15px; line-height:0px; font-size:0px;"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                                                                    <td height="15"
+                                                                        style="height:15px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" /></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="em_defaultlink" align="left"  valign="top" style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:14px; font-weight:normal;">
-                                                                        <strong>Your CryoStorage will <br> be placed in Denmark</strong>
+                                                                    <td class="em_defaultlink" align="left" valign="top"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:14px; font-weight:normal;">
+                                                                        <strong>Your CryoStorage will <br> be placed in
+                                                                            Denmark</strong>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td height="5" style="height:5px; line-height:0px; font-size:0px;"><img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}" width="1" height="1" alt="" border="0" style="display:block;" /></td>
+                                                                    <td height="5"
+                                                                        style="height:5px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" /></td>
                                                                 </tr>
                                                             </table>
                                                         </td>
-                                                <!-- END: Storage order conditional -->
-                                                {% endif %}
-                                                </tr>
-                                        </table></td>
-                                    </tr>
-                                    <!-- END : BILLING ADDRESS -->
-                            </table>
-                            </td>
-                        </tr>
-                    </table></td>
+                                                        <!-- END: Storage order conditional -->
+                                                        {% endif %}
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <!-- END : BILLING ADDRESS -->
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
-            </table></td>
-        </tr>
-    </table>
-    <!-- == //Body Section == -->
-    <!-- END English -->
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- == //Body Section == -->
+<!-- END English -->
