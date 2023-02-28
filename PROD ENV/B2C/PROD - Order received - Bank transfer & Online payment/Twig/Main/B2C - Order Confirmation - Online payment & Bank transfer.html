@@ -505,7 +505,8 @@
                                                                 src="{{ (attribute(items, counter).email_image) ? attribute(items, counter).email_image : 'https://europeanspermbank.email/asset/5:default-avatarjpg1' }}"
                                                                 alt=""
                                                                 style="display:block; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:12px; line-height:15px; max-width:60px;border-radius: 50%;"
-                                                                width="60" height="60" /></td>
+                                                                width="60" height="60" />
+                                                        </td>
                                                         <td width="20" style="width:20px;"> </td>
                                                         <td align="center" valign="top">
                                                             <table width="100%" border="0" cellspacing="0"
@@ -515,7 +516,8 @@
                                                                         style="height:15px; line-height:0px; font-size:0px;">
                                                                         <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
                                                                             width="1" height="1" alt="" border="0"
-                                                                            style="display:block;" /></td>
+                                                                            style="display:block;" />
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="em_defaultlink" align="left" valign="top"
@@ -527,7 +529,8 @@
                                                                         style="height:20px; line-height:0px; font-size:0px;">
                                                                         <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
                                                                             width="1" height="1" alt="" border="0"
-                                                                            style="display:block;" /></td>
+                                                                            style="display:block;" />
+                                                                    </td>
                                                                 </tr>
                                                             </table>
 
@@ -886,6 +889,8 @@
                                         <!-- END: SHIPPING AND TOTALS -->
 
                                         <!-- START: PAYMENT INFO -->
+
+                                        <!-- START: reepay_payment -->
                                         {% if paymentMethod == "reepay_payment" %}
                                         <tr>
                                             <td class="em_defaultlink" align="left" valign="top"
@@ -908,7 +913,8 @@
                                                         <td align="left" valign="top" width="60" style="width:55px;">
                                                             <img src="{{ imageCardType }}" alt=""
                                                                 style="display:block; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:12px; line-height:15px; max-width:60px;"
-                                                                width="55" height="55" /></td>
+                                                                width="55" height="55" />
+                                                        </td>
                                                         <td width="20" style="width:20px;"> </td>
                                                         <td align="center" valign="top">
                                                             <table width="100%" border="0" cellspacing="0"
@@ -918,7 +924,8 @@
                                                                         style="height:15px; line-height:0px; font-size:0px;">
                                                                         <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
                                                                             width="1" height="1" alt="" border="0"
-                                                                            style="display:block;" /></td>
+                                                                            style="display:block;" />
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="em_defaultlink" align="center"
@@ -932,7 +939,8 @@
                                                                         style="height:20px; line-height:0px; font-size:0px;">
                                                                         <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
                                                                             width="1" height="1" alt="" border="0"
-                                                                            style="display:block;" /></td>
+                                                                            style="display:block;" />
+                                                                    </td>
                                                                 </tr>
                                                             </table>
                                                         </td>
@@ -944,7 +952,8 @@
                                                                         style="height:15px; line-height:0px; font-size:0px;">
                                                                         <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
                                                                             width="1" height="1" alt="" border="0"
-                                                                            style="display:block;" /></td>
+                                                                            style="display:block;" />
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="em_defaultlink" align="right"
@@ -958,7 +967,8 @@
                                                                         style="height:20px; line-height:0px; font-size:0px;">
                                                                         <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
                                                                             width="1" height="1" alt="" border="0"
-                                                                            style="display:block;" /></td>
+                                                                            style="display:block;" />
+                                                                    </td>
                                                                 </tr>
                                                             </table>
                                                         </td>
@@ -968,6 +978,778 @@
                                             </td>
                                         </tr>
                                         {% endif %}
+                                        <!-- END: reepay_payment -->
+
+                                        <!-- START: reepay_mobilepay -->
+                                        {% if paymentMethod == "reepay_mobilepay" %}
+                                        <tr>
+                                            <td class="em_defaultlink" align="left" valign="top"
+                                                style="line-height:22px;font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:18px;color:#272A44; padding:20px 0px 16px 0px;">
+                                                PAYMENT INFO</td>
+                                        </tr>
+                                        <tr>
+                                            <td height="1"
+                                                style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;"
+                                                bgcolor="#cccccc"><img
+                                                    src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                    width="1" height="1" alt="" border="0" style="display:block;" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top" style="padding:26px 0px;">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                                                    align="center">
+                                                    <tr>
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="9"
+                                                                        style="height:9px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="left"
+                                                                        valign="middle"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        <img src="https://stage.europeanspermbank.email/asset/30:pay-mobilepaypng"
+                                                                            alt=""
+                                                                            style="display:block; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:12px; line-height:15px; max-width:60px;"
+                                                                            width="55" height="55" />
+                                                                    </td>
+                                                                </tr>
+
+                                                            </table>
+                                                        </td>
+
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="15"
+                                                                        style="height:15px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="center"
+                                                                        valign="top"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        MobilePay
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20"
+                                                                        style="height:20px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="15"
+                                                                        style="height:15px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="right"
+                                                                        valign="top"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        {{grandTotal}}
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20"
+                                                                        style="height:20px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        {% endif %}
+                                        <!-- END: reepay_mobilepay -->
+
+                                        <!-- START: reepay_klarnasliceit -->
+                                        {% if paymentMethod == "reepay_klarnasliceit" %}
+                                        <tr>
+                                            <td class="em_defaultlink" align="left" valign="top"
+                                                style="line-height:22px;font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:18px;color:#272A44; padding:20px 0px 16px 0px;">
+                                                PAYMENT INFO</td>
+                                        </tr>
+                                        <tr>
+                                            <td height="1"
+                                                style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;"
+                                                bgcolor="#cccccc"><img
+                                                    src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                    width="1" height="1" alt="" border="0" style="display:block;" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top" style="padding:26px 0px;">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                                                    align="center">
+                                                    <tr>
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="10"
+                                                                        style="height:10px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="left"
+                                                                        valign="middle"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        <img src="https://stage.europeanspermbank.email/asset/31:klarnapaymentbadgepng"
+                                                                            alt=""
+                                                                            style="display:block; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:12px; line-height:15px; max-width:60px;"
+                                                                            width="55" height="55" />
+                                                                    </td>
+                                                                </tr>
+
+                                                            </table>
+                                                        </td>
+
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="15"
+                                                                        style="height:15px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="center"
+                                                                        valign="top"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        Slice it
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20"
+                                                                        style="height:20px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="15"
+                                                                        style="height:15px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="right"
+                                                                        valign="top"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        {{grandTotal}}
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20"
+                                                                        style="height:20px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        {% endif %}
+                                        <!-- END: reepay_klarnasliceit -->
+
+                                        <!-- START: reepay_klarnapaylater -->
+                                        {% if paymentMethod == "reepay_klarnapaylater" %}
+                                        <tr>
+                                            <td class="em_defaultlink" align="left" valign="top"
+                                                style="line-height:22px;font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:18px;color:#272A44; padding:20px 0px 16px 0px;">
+                                                PAYMENT INFO</td>
+                                        </tr>
+                                        <tr>
+                                            <td height="1"
+                                                style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;"
+                                                bgcolor="#cccccc"><img
+                                                    src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                    width="1" height="1" alt="" border="0" style="display:block;" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top" style="padding:26px 0px;">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                                                    align="center">
+                                                    <tr>
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="10"
+                                                                        style="height:10px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="left"
+                                                                        valign="middle"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        <img src="https://stage.europeanspermbank.email/asset/31:klarnapaymentbadgepng"
+                                                                            alt=""
+                                                                            style="display:block; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:12px; line-height:15px; max-width:60px;"
+                                                                            width="55" height="55" />
+                                                                    </td>
+                                                                </tr>
+
+                                                            </table>
+                                                        </td>
+
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="15"
+                                                                        style="height:15px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="center"
+                                                                        valign="top"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        Pay in 30 days
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20"
+                                                                        style="height:20px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="15"
+                                                                        style="height:15px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="right"
+                                                                        valign="top"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        {{grandTotal}}
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20"
+                                                                        style="height:20px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        {% endif %}
+                                        <!-- END: reepay_klarnapaylater -->
+
+                                        <!-- START: reepay_klarnapaynow -->
+                                        {% if paymentMethod == "reepay_klarnapaynow" %}
+                                        <tr>
+                                            <td class="em_defaultlink" align="left" valign="top"
+                                                style="line-height:22px;font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:18px;color:#272A44; padding:20px 0px 16px 0px;">
+                                                PAYMENT INFO</td>
+                                        </tr>
+                                        <tr>
+                                            <td height="1"
+                                                style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;"
+                                                bgcolor="#cccccc"><img
+                                                    src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                    width="1" height="1" alt="" border="0" style="display:block;" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top" style="padding:26px 0px;">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                                                    align="center">
+                                                    <tr>
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="10"
+                                                                        style="height:10px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="left"
+                                                                        valign="middle"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        <img src="https://stage.europeanspermbank.email/asset/31:klarnapaymentbadgepng"
+                                                                            alt=""
+                                                                            style="display:block; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:12px; line-height:15px; max-width:60px;"
+                                                                            width="55" height="55" />
+                                                                    </td>
+                                                                </tr>
+
+                                                            </table>
+                                                        </td>
+
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="15"
+                                                                        style="height:15px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="center"
+                                                                        valign="top"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        Direct Bank Transfer
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20"
+                                                                        style="height:20px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="15"
+                                                                        style="height:15px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="right"
+                                                                        valign="top"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        {{grandTotal}}
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20"
+                                                                        style="height:20px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        {% endif %}
+                                        <!-- END: reepay_klarnapaynow -->
+
+                                        <!-- START: reepay_klarnadirectbanktransfer -->
+                                        {% if paymentMethod == "reepay_klarnadirectbanktransfer" %}
+                                        <tr>
+                                            <td class="em_defaultlink" align="left" valign="top"
+                                                style="line-height:22px;font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:18px;color:#272A44; padding:20px 0px 16px 0px;">
+                                                PAYMENT INFO</td>
+                                        </tr>
+                                        <tr>
+                                            <td height="1"
+                                                style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;"
+                                                bgcolor="#cccccc"><img
+                                                    src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                    width="1" height="1" alt="" border="0" style="display:block;" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top" style="padding:26px 0px;">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                                                    align="center">
+                                                    <tr>
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="10"
+                                                                        style="height:10px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="left"
+                                                                        valign="middle"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        <img src="https://stage.europeanspermbank.email/asset/31:klarnapaymentbadgepng"
+                                                                            alt=""
+                                                                            style="display:block; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:12px; line-height:15px; max-width:60px;"
+                                                                            width="55" height="55" />
+                                                                    </td>
+                                                                </tr>
+
+                                                            </table>
+                                                        </td>
+
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="15"
+                                                                        style="height:15px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="center"
+                                                                        valign="top"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        Direct Bank Transfer
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20"
+                                                                        style="height:20px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="15"
+                                                                        style="height:15px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="right"
+                                                                        valign="top"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        {{grandTotal}}
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20"
+                                                                        style="height:20px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        {% endif %}
+                                        <!-- END: reepay_klarnadirectbanktransfer -->
+
+                                        <!-- START: reepay_applepay -->
+                                        {% if paymentMethod == "reepay_applepay" %}
+                                        <tr>
+                                            <td class="em_defaultlink" align="left" valign="top"
+                                                style="line-height:22px;font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:18px;color:#272A44; padding:20px 0px 16px 0px;">
+                                                PAYMENT INFO</td>
+                                        </tr>
+                                        <tr>
+                                            <td height="1"
+                                                style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;"
+                                                bgcolor="#cccccc"><img
+                                                    src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                    width="1" height="1" alt="" border="0" style="display:block;" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top" style="padding:26px 0px;">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                                                    align="center">
+                                                    <tr>
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="10"
+                                                                        style="height:10px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="left"
+                                                                        valign="middle"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        <img src="https://stage.europeanspermbank.email/asset/33:pay-applepay3xpng"
+                                                                            alt=""
+                                                                            style="display:block; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:12px; line-height:15px; max-width:60px;"
+                                                                            width="55" height="55" />
+                                                                    </td>
+                                                                </tr>
+
+                                                            </table>
+                                                        </td>
+
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="15"
+                                                                        style="height:15px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="center"
+                                                                        valign="top"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        Apple Pay
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20"
+                                                                        style="height:20px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="15"
+                                                                        style="height:15px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="right"
+                                                                        valign="top"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        {{grandTotal}}
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20"
+                                                                        style="height:20px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        {% endif %}
+                                        <!-- END: reepay_applepay -->
+
+                                        <!-- START: reepay_googlepay -->
+                                        {% if paymentMethod == "reepay_googlepay" %}
+                                        <tr>
+                                            <td class="em_defaultlink" align="left" valign="top"
+                                                style="line-height:22px;font-family:'lucida sans unicode', 'lucida grande', arial, sans-serif;font-size:18px;color:#272A44; padding:20px 0px 16px 0px;">
+                                                PAYMENT INFO</td>
+                                        </tr>
+                                        <tr>
+                                            <td height="1"
+                                                style="height:1px; line-height:0px; font-size:0px; background-color:#cccccc;"
+                                                bgcolor="#cccccc"><img
+                                                    src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                    width="1" height="1" alt="" border="0" style="display:block;" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top" style="padding:26px 0px;">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                                                    align="center">
+                                                    <tr>
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="10"
+                                                                        style="height:10px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="left"
+                                                                        valign="middle"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        <img src="https://stage.europeanspermbank.email/asset/32:pay-googlepay3xpng"
+                                                                            alt=""
+                                                                            style="display:block; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:12px; line-height:15px; max-width:60px;"
+                                                                            width="55" height="55" />
+                                                                    </td>
+                                                                </tr>
+
+                                                            </table>
+                                                        </td>
+
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="15"
+                                                                        style="height:15px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="center"
+                                                                        valign="top"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        Google Pay
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20"
+                                                                        style="height:20px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+
+                                                        <td align="center" valign="top">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                cellpadding="0" align="left">
+                                                                <tr>
+                                                                    <td height="15"
+                                                                        style="height:15px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="em_defaultlink" align="right"
+                                                                        valign="top"
+                                                                        style=" font-family: 'helvetica neue', arial, sans-serif;line-height:24px;color:#272A44;font-size:16px; font-weight:bold;">
+                                                                        {{grandTotal}}
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20"
+                                                                        style="height:20px; line-height:0px; font-size:0px;">
+                                                                        <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
+                                                                            width="1" height="1" alt="" border="0"
+                                                                            style="display:block;" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        {% endif %}
+                                        <!-- END: reepay_googlepay -->
+
                                         <!-- END: PAYMENT INFO -->
 
                                         <!-- START : BILLING AND SHIPPING INFO -->
@@ -1000,7 +1782,8 @@
                                                                         style="height:15px; line-height:0px; font-size:0px;">
                                                                         <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
                                                                             width="1" height="1" alt="" border="0"
-                                                                            style="display:block;" /></td>
+                                                                            style="display:block;" />
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="em_defaultlink" align="left" valign="top"
@@ -1020,7 +1803,8 @@
                                                                         style="height:20px; line-height:0px; font-size:0px;">
                                                                         <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
                                                                             width="1" height="1" alt="" border="0"
-                                                                            style="display:block;" /></td>
+                                                                            style="display:block;" />
+                                                                    </td>
                                                                 </tr>
                                                             </table>
                                                         </td>
@@ -1035,7 +1819,8 @@
                                                                         style="height:15px; line-height:0px; font-size:0px;">
                                                                         <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
                                                                             width="1" height="1" alt="" border="0"
-                                                                            style="display:block;" /></td>
+                                                                            style="display:block;" />
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="em_defaultlink" align="right"
@@ -1054,7 +1839,8 @@
                                                                         style="height:20px; line-height:0px; font-size:0px;">
                                                                         <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
                                                                             width="1" height="1" alt="" border="0"
-                                                                            style="display:block;" /></td>
+                                                                            style="display:block;" />
+                                                                    </td>
                                                                 </tr>
                                                             </table>
                                                         </td>
@@ -1067,7 +1853,8 @@
                                                                         style="height:15px; line-height:0px; font-size:0px;">
                                                                         <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
                                                                             width="1" height="1" alt="" border="0"
-                                                                            style="display:block;" /></td>
+                                                                            style="display:block;" />
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="em_defaultlink" align="right"
@@ -1082,7 +1869,8 @@
                                                                         style="height:20px; line-height:0px; font-size:0px;">
                                                                         <img src="{{getAssetUrl('themes/'~template~'/img/spacer.gif')}}"
                                                                             width="1" height="1" alt="" border="0"
-                                                                            style="display:block;" /></td>
+                                                                            style="display:block;" />
+                                                                    </td>
                                                                 </tr>
                                                             </table>
                                                         </td>
